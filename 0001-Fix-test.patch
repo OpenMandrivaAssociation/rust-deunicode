@@ -1,0 +1,39 @@
+From f6bd781f8edc54aa4d2d25915b7af4cc3108e77c Mon Sep 17 00:00:00 2001
+From: Kornel <kornel@geekhood.net>
+Date: Sat, 22 Dec 2018 20:29:19 +0000
+Subject: [PATCH] Fix test
+
+---
+ README.md  | 2 +-
+ src/lib.rs | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 91ea5b0..a4d75be 100644
+--- a/README.md
++++ b/README.md
+@@ -20,7 +20,7 @@ assert_eq!(deunicode("étude"), "etude");
+ assert_eq!(deunicode("北亰"), "Bei Jing");
+ assert_eq!(deunicode("ᔕᓇᓇ"), "shanana");
+ assert_eq!(deunicode("げんまい茶"), "genmaiCha");
+-assert_eq!(deunicode("🦄☣"), "unicorn face biohazard");
++assert_eq!(deunicode("🦄☣"), "unicorn biohazard");
+ ```
+ 
+ Guarantees and Warnings
+diff --git a/src/lib.rs b/src/lib.rs
+index e278371..7713c84 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -16,7 +16,7 @@
+ //! assert_eq!(deunicode("北亰"), "Bei Jing");
+ //! assert_eq!(deunicode("ᔕᓇᓇ"), "shanana");
+ //! assert_eq!(deunicode("げんまい茶"), "genmaiCha");
+-//! assert_eq!(deunicode("🦄☣"), "unicorn face biohazard");
++//! assert_eq!(deunicode("🦄☣"), "unicorn biohazard");
+ //! ```
+ 
+ use std::str::Chars;
+-- 
+2.22.0.rc1
+
